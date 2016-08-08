@@ -3,7 +3,7 @@ using System.IO;
 
 namespace EW_UPT_Helper
 {
-    class UPT
+    class FromUPT
     {
         private char[] splitter = { ' ', '\t' };
         // The converter builds .acs and .ept file based on the contents
