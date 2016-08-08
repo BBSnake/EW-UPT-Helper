@@ -90,5 +90,16 @@ namespace EW_UPT_Helper
         {
 
         }
+
+        private void xyzRadioBtn_Checked(object sender, RoutedEventArgs e)
+        {
+            attrCheckBox.IsChecked = false;
+            attrCheckBox.IsEnabled = false;
+        }
+
+        private void xyzRadioBtn_Unchecked(object sender, RoutedEventArgs e)
+        {
+            attrCheckBox.IsEnabled = true;
+        }
     }
 }

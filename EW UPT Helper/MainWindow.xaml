@@ -57,7 +57,7 @@
                 <Button Grid.Row="4" Grid.Column="0" Content="Konwertuj" HorizontalAlignment="Left" Name="toUptConvertBtn" Width="80" Height="30" Margin="5,5,0,5" Click="toUptConvertBtn_Click"/>
             </Grid>
         </GroupBox>
-        <GroupBox Grid.Row="2" Grid.Column="0" Header="Porównywarka" Margin="10,5,10,0">
+        <GroupBox Grid.Row="2" Grid.Column="0" Header="Porównywarka" Margin="10,5,10,10">
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto"/>
@@ -77,6 +77,18 @@
                 <TextBox Grid.Row="3" Grid.Column="0" Name="measurementsFilePath" IsEnabled="False" Width="300" Height="20" Margin="5,0,0,0"/>
                 <Button Grid.Row="3" Grid.Column="1" Name="measurementsFileBtn" Content="Wybierz plik"  Width="80" Height="20" Margin="5,0,5,0" Click="measurementsFileBtn_Click"/>
                 <Button Grid.Row="4" Grid.Column="0" Name="compareBtn" Content="Porównaj" HorizontalAlignment="Left"  Width="80" Height="30" Margin="5,5,0,5" Click="compareBtn_Click"/>
+            </Grid>
+        </GroupBox>
+        <GroupBox Grid.Row="2" Grid.Column="1" Header="Opcje porównania" Margin="0,5,10,10">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <RadioButton Grid.Row="0" Name="xyRadioBtn" Content="Porównanie XY" Margin="5,5" IsChecked="True"/>
+                <RadioButton Grid.Row="1" Name="xyzRadioBtn" Content="Porównanie XYZ" Margin="5,5" Checked="xyzRadioBtn_Checked" Unchecked="xyzRadioBtn_Unchecked"/>
+                <CheckBox Grid.Row="2" Name="attrCheckBox" Content="Uwzględniaj atrybuty" Margin="5,5"/>
             </Grid>
         </GroupBox>
     </Grid>
