@@ -5,12 +5,79 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:EW_UPT_Helper"
         mc:Ignorable="d"
-        Title="EW UPT Helper" Height="125" Width="425">
-    <Grid>
-        
-        <Label Margin="10,0,0,0">Plik UPT:</Label>
-        <TextBox Name="filePath" IsEnabled="False" Visibility="Visible" Width="300" Height="20" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,25,0,0"></TextBox>
-        <Button Name="fileBtn" HorizontalAlignment="Left" VerticalAlignment="Top" Width="80" Height="20" Margin="320,25,0,0" Click="fileBtn_Click">Wybierz plik</Button>
-        <Button Name="convertBtn" HorizontalAlignment="Left" VerticalAlignment="Top" Width="80" Height="30" Margin="10,50,0,0" Click="convertBtn_Click">Konwertuj</Button>
+        Title="EW UPT Helper" ResizeMode="CanMinimize" SizeToContent="WidthAndHeight" Padding="0" Margin="0">
+    <Grid Margin="0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+        <!--From UPT conversion-->
+        <GroupBox Grid.Row="0" Grid.Column="0" Header="Konwersja do EPT i ACS" Margin="10,5,10,0" VerticalAlignment="Top">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <Label Grid.Row="0" Grid.Column="0" Content="Pliki UPT:" Margin="0,0,0,0"/>
+                <TextBox Grid.Row="1" Grid.Column="0" Name="uptFilePath" IsEnabled="False" Width="300" Height="20" Margin="5,0,0,0"/>
+                <Button Grid.Row="1" Grid.Column="1" Content="Wybierz pliki" Name="uptFileBtn" Width="80" Height="20" Margin="5,0,5,0" Click="uptFileBtn_Click"/>
+                <Button Grid.Row="2" Grid.Column="0" Content="Konwertuj" HorizontalAlignment="Left" Name="fromUptConvertBtn" Width="80" Height="30" Margin="5,5,0,5" Click="fromUptConvertBtn_Click"/>
+            </Grid>
+        </GroupBox>
+        <!--To UPT conversion-->
+        <GroupBox Grid.Row="1" Grid.Column="0" Header="Konwersja do UPT" Margin="10,5,10,0" VerticalAlignment="Top">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <Label Grid.Row="0" Grid.Column="0" Content="Plik EPT:"/>
+                <TextBox Grid.Row="1" Grid.Column="0" Name="eptFilePath" IsEnabled="False" Width="300" Height="20" Margin="5,0,0,0"/>
+                <Button Grid.Row="1" Grid.Column="1" Content="Wybierz plik" Name="eptFileBtn" Width="80" Height="20" Margin="5,0,5,0" Click="eptFileBtn_Click"/>
+                <Label Grid.Row="2" Grid.Column="0" Content="Plik ACS:"/>
+                <TextBox Grid.Row="3" Grid.Column="0" Name="acsFilePath" IsEnabled="False" Width="300" Height="20" Margin="5,0,0,0"/>
+                <Button Grid.Row="3" Grid.Column="1" Content="Wybierz plik" Name="acsFileBtn" Width="80" Height="20" Margin="5,0,5,0" Click="acsFileBtn_Click"/>
+                <Button Grid.Row="4" Grid.Column="0" Content="Konwertuj" HorizontalAlignment="Left" Name="toUptConvertBtn" Width="80" Height="30" Margin="5,5,0,5" Click="toUptConvertBtn_Click"/>
+            </Grid>
+        </GroupBox>
+        <GroupBox Grid.Row="2" Grid.Column="0" Header="Porównywarka" Margin="10,5,10,0">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <Label Grid.Row="0" Grid.Column="0" Content="Plik z danymi:"/>
+                <TextBox Grid.Row="1" Grid.Column="0" Name="dataFilePath" IsEnabled="False" Width="300" Height="20" Margin="5,0,0,0"/>
+                <Button Grid.Row="1" Grid.Column="1" Name="dataFileBtn" Content="Wybierz plik"  Width="80" Height="20" Margin="5,0,5,0" Click="dataFileBtn_Click"/>
+                <Label Grid.Row="2" Grid.Column="0" Content="Plik z pomiarami:"/>
+                <TextBox Grid.Row="3" Grid.Column="0" Name="measurementsFilePath" IsEnabled="False" Width="300" Height="20" Margin="5,0,0,0"/>
+                <Button Grid.Row="3" Grid.Column="1" Name="measurementsFileBtn" Content="Wybierz plik"  Width="80" Height="20" Margin="5,0,5,0" Click="measurementsFileBtn_Click"/>
+                <Button Grid.Row="4" Grid.Column="0" Name="compareBtn" Content="Porównaj" HorizontalAlignment="Left"  Width="80" Height="30" Margin="5,5,0,5" Click="compareBtn_Click"/>
+            </Grid>
+        </GroupBox>
     </Grid>
 </Window>

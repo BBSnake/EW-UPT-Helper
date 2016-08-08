@@ -8,10 +8,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace EW_UPT_Helper.Properties
-{
-
-
+namespace EW_UPT_Helper.Properties {
+    using System;
+    
+    
     /// <summary>
     ///   A strongly-typed resource class, for looking up localized strings, etc.
     /// </summary>
@@ -22,49 +22,64 @@ namespace EW_UPT_Helper.Properties
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class Resources
-    {
-
+    internal class Resources {
+        
         private static global::System.Resources.ResourceManager resourceMan;
-
+        
         private static global::System.Globalization.CultureInfo resourceCulture;
-
+        
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal Resources()
-        {
+        internal Resources() {
         }
-
+        
         /// <summary>
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager
-        {
-            get
-            {
-                if ((resourceMan == null))
-                {
+        internal static global::System.Resources.ResourceManager ResourceManager {
+            get {
+                if (object.ReferenceEquals(resourceMan, null)) {
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("EW_UPT_Helper.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
             }
         }
-
+        
         /// <summary>
         ///   Overrides the current thread's CurrentUICulture property for all
         ///   resource lookups using this strongly typed resource class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture
-        {
-            get
-            {
+        internal static global::System.Globalization.CultureInfo Culture {
+            get {
                 return resourceCulture;
             }
-            set
-            {
+            set {
                 resourceCulture = value;
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to NumerPkt,&quot;Numer punktu&quot;,1,19,1,&quot;&quot;
+        ///Oznaczenie,&quot;Oznaczenie źródłowe&quot;,1,19,0,&quot;&quot;
+        ///KodStab,&quot;Kod stabilizacji&quot;,5,0
+        ///Zrodlo,&quot;Źródło danych o położeniu&quot;,5,0
+        ///BladPol,&quot;Błąd położ. wzgl. osnowy&quot;,5,0
+        ///RZG,&quot;Kod rzędu granicy&quot;,5,0
+        ///NPRG,&quot;Numer punktu w PRG&quot;,1,19,0,&quot;&quot;
+        ///LPRG,&quot;Numer linii granicznej w PRG&quot;,1,19,0,&quot;&quot;
+        ///**
+        ///KodStab,1,&quot;brak informacji&quot;,&quot;&quot;
+        ///KodStab,2,&quot;niestabilizowany&quot;,&quot;&quot;
+        ///KodStab,3,&quot;znak naziemny&quot;,&quot;&quot;
+        ///KodStab,4,&quot;znak naziemny i podziemny&quot;,&quot;&quot;
+        ///KodStab,5,&quot;znak podziemny&quot;,&quot;&quot;
+        ///Zrodlo,11,&quot;geodezyjne pomiary tereno [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string szablon {
+            get {
+                return ResourceManager.GetString("szablon", resourceCulture);
             }
         }
     }
