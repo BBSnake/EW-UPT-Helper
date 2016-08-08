@@ -10,6 +10,7 @@ namespace EW_UPT_Helper
     public partial class MainWindow : Window
     {
         private OpenFileDialog ofd;
+        private SaveFileDialog sfd;
         public MainWindow()
         {
             InitializeComponent();
@@ -29,7 +30,7 @@ namespace EW_UPT_Helper
         private void fromUptConvertBtn_Click(object sender, RoutedEventArgs e)
         {
             
-            UPT fromUptConverter = new UPT();
+            FromUPT fromUptConverter = new FromUPT();
             
             foreach (string fileName in ofd.FileNames)
             {
@@ -61,7 +62,15 @@ namespace EW_UPT_Helper
 
         private void toUptConvertBtn_Click(object sender, RoutedEventArgs e)
         {
-
+            sfd = new SaveFileDialog()
+            {
+                Filter = "Plik UPT|*.upt|Plik tekstowy|*.txt|Wszystkie pliki|*"
+            };
+            if((sfd.ShowDialog() == true) && (sfd.FileName != null))
+            {
+                ToUPT toUptConverter = new ToUPT();
+                toUptConverter.Convert(sfd.FileName, eptFilePath.Text, acsFilePath.Text);
+            }
         }
 
         private void dataFileBtn_Click(object sender, RoutedEventArgs e)
